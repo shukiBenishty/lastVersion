@@ -30,7 +30,11 @@ class EmployeesTable extends React.Component {
         data: []
       }
     }
+
+
   }
+
+
 
 
   componentWillReceiveProps (newProps) {
@@ -44,6 +48,8 @@ class EmployeesTable extends React.Component {
       });
     };
   }
+
+
 
   render() {
     const { data } = this.state;
@@ -59,22 +65,19 @@ class EmployeesTable extends React.Component {
             {
              columns: [
                {
-                 expander: true,
                  Header: "ערוך",
                  width: 65,
-                 Expander: ({ isExpanded, ...rest }) =>
+                 filterable: false,
+                 Cell: ({index, ...rest }) =>
                    <div>
-                     {isExpanded
-                       ? <span>&#9998;</span>
-                       : <span>&#9998;</span>}
+                       <EmployeeEditor displayButton={<span >&#9998;</span>}
+                            comp={<MaterialUiForm
+                                      initdata={data[index]}
+                                      onSubmit={addEmployee}
+                                      />}
+                        />
                    </div>,
-                 style: {
-                   cursor: "pointer",
-                   fontSize: 25,
-                   padding: "0",
-                   textAlign: "center",
-                   userSelect: "none"
-                 }
+
                }
              ]
            },
@@ -141,9 +144,7 @@ class EmployeesTable extends React.Component {
           ]}
           defaultPageSize={15}
           className="-striped -highlight"
-           SubComponent={() => <div >
-                                 <EmployeeEditor comp={<MaterialUiForm onSubmit={addEmployee} />}/>
-                               </div>}
+
         />
       </div>
     );
@@ -158,3 +159,7 @@ const mapStateToProps = state =>
 };
 
 export default connect(mapStateToProps)(EmployeesTable);
+//
+// SubComponent={(row) => <div >
+//                        <EmployeeEditor comp={<MaterialUiForm initdata={data[row.index]} onSubmit={addEmployee} />}/>
+//                      </div>}

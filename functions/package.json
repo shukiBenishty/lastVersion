@@ -1,16 +1,14 @@
 {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "serve": "firebase serve --only functions",
-    "shell": "firebase experimental:functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
+  "name": "functions-isomorphic-react-app",
+  "description": "A sample isomorphic React app using Functions and Hosting",
   "dependencies": {
-    "firebase-admin": "~5.8.1",
-    "firebase-functions": "^0.8.1"
-  },
-  "private": true
+    "express": "4.15.2",
+    "firebase": "3.9.0",
+    "firebase-admin": "4.0.5",
+    "firebase-functions": "^0.5.5",
+    "react": "15.5.4",
+    "react-dom": "15.5.4",
+    "react-table": "^6.7.6",
+    "request": "2.81.0"
+  }
 }

@@ -10,6 +10,20 @@ import asyncValidate from './asyncValidate';
 import validate from './validate';
 import { load as loadDeta } from '../../employeeEditorReducer.js';
 
+const data = {
+  "addressCity" : "אשדוד",
+  "addressStreet" : "מילמן",
+  "birthday" : "10/01/1988",
+  "degree" : "סטודנט",
+  "email" : "shuki.benishty@gmail.com",
+  "firstName" : "שוקי",
+  "id" : "200360303",
+  "lastName" : "בנישתי",
+  "phone" : "0546592374",
+  "receivedDate" : "25/11/2008",
+  "telephone" : "036487441"
+};
+
 
 const Arr = [
 {
@@ -165,24 +179,24 @@ class MaterialUiForm extends React.Component {
 
   constructor(props){
     super(props);
-    const { handleSubmit, pristine, reset, submitting, load, initdata } = props;
-
+    // const { handleSubmit, pristine, reset, submitting, load, initdata } = props;
+    props.load(props.initdata)
   }
 
-
-  // componentDidMount(){
-  //   this.load(this.initdata)
-  //
+  // componentWillReceiveProps(nextProps){
+  //   if (nextProps.initialValues !== this.props.initialValues){
+  //     this.props.load(props.initdata)
+  //   }
   // }
 
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.props.handleSubmit}>
         {createFields(Arr)}
         <div>
-          <button type="submit" disabled={this.pristine || this.submitting}>Submit</button>
-          <button type="button" disabled={this.pristine || this.submitting} onClick={this.reset}>
+          <button type="submit" disabled={this.props.pristine || this.props.submitting}>Submit</button>
+          <button type="button" disabled={this.props.pristine || this.props.submitting} onClick={this.props.reset}>
             Clear Values
           </button>
         </div>
@@ -217,9 +231,10 @@ MaterialUiForm = reduxForm({
 // You have to connect() to any reducers that you wish to connect to yourself
 MaterialUiForm = connect(
   state => ({
-    initialValues: state.init.data // pull initial values from account reducer
+    initialValues: state.initReducers.data,
+    enableReinitialize: true // pull initial values from account reducer
   }),
-  { load: loadDeta }, // bind account loading action creator
+  { load: loadDeta } // bind account loading action creator
 )(MaterialUiForm);
 
 

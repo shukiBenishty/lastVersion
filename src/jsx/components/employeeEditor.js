@@ -10,7 +10,7 @@ export default class DialogExampleAlert extends React.Component {
     super(props);
 
     this.state = {
-      open: true,
+      open: false,
     };
     this.handleOpen = this.handleOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
@@ -36,6 +36,9 @@ export default class DialogExampleAlert extends React.Component {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div>
+          <button onClick={this.handleOpen}>
+          {this.props.displayButton}
+          </button>
           <Dialog
             actions={actions}
             modal={false}

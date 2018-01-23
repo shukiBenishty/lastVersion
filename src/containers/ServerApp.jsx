@@ -7,10 +7,11 @@ import thunk from 'redux-thunk';
 import database from 'firebase-database';
 import reducers from '../jsx/reducers.jsx';
 import Routes  from '../jsx/routes.jsx';
-
+import initReducers from "../jsx/components/employeeEditorReducer.js";
 import { reducer as reduxFormReducer } from 'redux-form';
 
 const reducer = combineReducers({
+  initReducers,
   form: reduxFormReducer, // mounted under "form"
   app: reducers
 });

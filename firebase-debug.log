@@ -1,0 +1,71 @@
+[debug] [2018-01-23T10:01:18.434Z] ----------------------------------------------------------------------
+[debug] [2018-01-23T10:01:18.456Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\bin\firebase serve --only hosting,functions
+[debug] [2018-01-23T10:01:18.459Z] CLI Version:   3.16.0
+[debug] [2018-01-23T10:01:18.459Z] Platform:      win32
+[debug] [2018-01-23T10:01:18.459Z] Node Version:  v6.11.5
+[debug] [2018-01-23T10:01:18.462Z] Time:          Tue Jan 23 2018 12:01:18 GMT+0200 (שעון רגיל ירושלים)
+[debug] [2018-01-23T10:01:18.462Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-23T10:01:18.826Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-23T10:01:18.827Z] > authorizing via signed-in user
+[debug] [2018-01-23T10:01:18.838Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-23T10:01:18.839Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/rg6JIr07BxQb0DTQQ_oEw-I10VFdM5_I4vaGw2kfzyI',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Jan 23 2018 12:01:18 GMT+0200 (שעון רגיל ירושלים)
+[debug] [2018-01-23T10:01:19.460Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-23T10:01:19.543Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/k-m-system  
+  
+ Tue Jan 23 2018 12:01:19 GMT+0200 (שעון רגיל ירושלים)
+[debug] [2018-01-23T10:01:21.092Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-23T10:01:21.096Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/k-m-system/tokens  
+  
+ Tue Jan 23 2018 12:01:21 GMT+0200 (שעון רגיל ירושלים)
+[debug] [2018-01-23T10:01:22.080Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\shuki1\node\isomorphic-react'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-01-23T10:08:38.827Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/k-m-system  
+  
+ Tue Jan 23 2018 12:08:38 GMT+0200 (שעון רגיל ירושלים)
+[debug] [2018-01-23T10:08:38.832Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/k-m-system/apiKeys  
+  
+ Tue Jan 23 2018 12:08:38 GMT+0200 (שעון רגיל ירושלים)
+[debug] [2018-01-23T10:08:38.835Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/k-m-system  
+  
+ Tue Jan 23 2018 12:08:38 GMT+0200 (שעון רגיל ירושלים)
+[debug] [2018-01-23T10:08:40.566Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-23T10:08:40.576Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-23T10:08:40.578Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/487981116258/clients/_:getWebAppConfig  
+  
+ Tue Jan 23 2018 12:08:40 GMT+0200 (שעון רגיל ירושלים)
+[debug] [2018-01-23T10:08:40.581Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-23T10:08:42.954Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] +  functions: app: http://localhost:5001/k-m-system/us-central1/app
+[info] +  functions: fromGgn: http://localhost:5001/k-m-system/us-central1/fromGgn
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app

@@ -32,7 +32,7 @@ class EmployeeForm extends React.Component {
                  <div className='modal-body'>
                   <MuiThemeProvider muiTheme={getMuiTheme()}>
                     <div style={{ padding: 15 }}>
-                      <MaterialUiForm onSubmit={addEmployee} initdata={{}} />
+                      <MaterialUiForm onSubmit={addEmployee} />
                     </div>
                   </MuiThemeProvider>
                  </div>
